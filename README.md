@@ -1,6 +1,22 @@
 ## About RESALE APP
 
-Resale app is a simple a prototype to sell old and used products and household items. This prototype is created for CODE University of Applied Sciences Challenge. 
+Resale app is a prototype web application to sell old and used products and household items. This prototype is created for CODE University of Applied Sciences Challenge. 
+
+<b>Applicant Info:</b> <br >
+<b>Name: </b> Muhammad Umair <br >
+<b>Email: </b> muhumairkhan@gmail.com <br >
+<b>Phone: </b> +923162154391 
+
+## Techonolgy/Framework Used
+
+- Laravel
+- PHP
+- SQL
+- MySQL
+- HTML
+- CSS
+- Javascript
+- Bootstrap
 
 ## Community Problem
 

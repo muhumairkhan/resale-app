@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostController extends Controller
 {
@@ -23,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('ad.create');
     }
 
     /**
@@ -34,7 +35,22 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $this->validate($request, array(
+            'title' => ['required', 'max:255'],
+            'price' => ['required', 'integer'],
+            'description' => ['required']
+        ));
+
+        $oPost = new Post();
+        $oPost->user_id = 1;
+        $oPost->title = $request->title;
+        $oPost->description = $request->description;
+        $oPost->price = $request->price;
+
+        $oPost->save();
+
+        return redirect()->route('ad.show', $oPost->id);
     }
 
     /**
@@ -45,7 +61,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        return $id;
     }
 
     /**

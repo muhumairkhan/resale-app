@@ -18,7 +18,7 @@ class PostController extends Controller
     {
         $oPost = new Post();
 
-        $allPosts = $oPost::all();
+        $allPosts = $oPost::orderBy('id', 'desc')->paginate(4);
 
         return view('pages.index')->with('posts', $allPosts);
     }

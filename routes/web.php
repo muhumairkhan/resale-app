@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PostController@index');
 
-Route::resource('ad', 'PostController', ['except' => ['destroy']]);
+Route::resource('ad', 'PostController', ['except' => ['destroy', 'update']]);
 Route::get('/ad/{id}/destroy','PostController@destroy');
+Route::post('/ad/update','PostController@update');
 
 Route::get('about', 'PagesController@getAbout');

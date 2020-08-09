@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
+use MongoDB\Driver\Session;
 
 class PostController extends Controller
 {
@@ -80,7 +81,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        return 'Editing post: '.$id;
+        $post = Post::find($id);
+
+        return view('ad.edit', ['post' => $post]);
     }
 
     /**
@@ -90,9 +93,25 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
 
+        $this->validate($request, array(
+            'title' => ['required', 'max:255'],
+            'price' => ['required', 'integer'],
+            'description' => ['required']
+        ));
+
+        $post_id = $request->input('id');
+
+        $oPost = Post::find($post_id);
+        $oPost->title = $request->input('title');
+        $oPost->description = $request->input('description');
+        $oPost->price = $request->input('price');
+
+        $oPost->save();
+
+        return redirect('/ad/'.$post_id);
     }
 
     /**

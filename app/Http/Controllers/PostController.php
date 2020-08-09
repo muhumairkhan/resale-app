@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
 
 class PostController extends Controller
 {
@@ -61,7 +62,10 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return $id;
+        $post = Post::find($id);
+        $user = User::find($post->user_id);
+
+        return view('ad.show', ['post' => $post, 'user' => $user]);
     }
 
     /**

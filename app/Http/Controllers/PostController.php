@@ -80,7 +80,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        return 'Editing post: '.$id;
     }
 
     /**
@@ -92,7 +92,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return 'Updating post: ';
+
     }
 
     /**
@@ -103,6 +103,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        return 'Deleting post: '. $id;
+        Post::destroy($id);
+
+        return redirect('/');
     }
 }

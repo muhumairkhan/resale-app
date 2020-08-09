@@ -47,10 +47,7 @@
                         <a href="/ad/{{ $post->id }}/edit"><button type="button" class="btn btn-info">Edit Ad</button></a>
                     </div>
                     <div class="col-md-2">
-                        <form method="delete" action="/ad/{{ $post->id }}">
-                            {{ csrf_field() }}
-                            <button type="submit" type="button" class="btn btn-danger">Delete Ad</button>
-                        </form>
+                        <a href="/ad/{{ $post->id }}/destroy"><button type="button" class="btn btn-danger">Delete Ad</button></a>
                     </div>
                 </div>
                 <hr>

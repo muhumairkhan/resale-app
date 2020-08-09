@@ -19,9 +19,6 @@ class PostController extends Controller
 
         $allPosts = $oPost::all();
 
-//        echo "<pre>"; print_r($allPosts); echo "</pre>";
-//        die();
-
         return view('pages.index')->with('posts', $allPosts);
     }
 
@@ -95,7 +92,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return 'Updating post: ';
     }
 
     /**
@@ -106,6 +103,6 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return 'Deleting post: '. $id;
     }
 }

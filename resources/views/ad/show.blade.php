@@ -20,7 +20,7 @@
                 <hr>
 
                 <!-- Date/Time -->
-                <p>  <span class="badge badge-secondary">Posted</span> {{ $post->created_at }}</p>
+                <p>  <span class="badge badge-secondary">Posted</span> {{ date('M j, Y H:i', strtotime($post->created_at)) }}</p>
                 <p> <span class="badge badge-secondary">Price</span> ${{ $post->price }} </p>
                 <hr>
 

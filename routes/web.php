@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@index');
-
-Route::get('about', 'PagesController@getAbout');
+Route::get('/', 'PostController@index');
 
 Route::resource('ad', 'PostController');
+
+Route::get('about', 'PagesController@getAbout');

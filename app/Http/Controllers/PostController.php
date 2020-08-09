@@ -15,7 +15,14 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $oPost = new Post();
+
+        $allPosts = $oPost::all();
+
+//        echo "<pre>"; print_r($allPosts); echo "</pre>";
+//        die();
+
+        return view('pages.index')->with('posts', $allPosts);
     }
 
     /**

@@ -30,7 +30,7 @@
                 <hr>
 
                 <p>{{ $post->description }}</p>
-                
+
 {{--                <!-- Comments Form -->--}}
 {{--                <div class="card my-4">--}}
 {{--                    <h5 class="card-header">Leave a Comment:</h5>--}}

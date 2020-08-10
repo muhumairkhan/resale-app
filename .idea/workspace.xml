@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf1f8259-a6bc-45d5-ae57-9084b6e99513" name="Default Changelist" comment="" />
+    <list default="true" id="cf1f8259-a6bc-45d5-ae57-9084b6e99513" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +19,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -123,6 +128,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1fhxm3fEV4jm7u4ytt71KJGLY9j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -130,11 +136,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../html/migration" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/ad" />
+      <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/resources/views/pages" />
     </key>
   </component>
@@ -153,7 +161,8 @@
       <option name="presentableId" value="Default" />
       <updated>1596684281172</updated>
       <workItem from="1596684282320" duration="3329000" />
-      <workItem from="1596854826605" duration="3523000" />
+      <workItem from="1596854826605" duration="3630000" />
+      <workItem from="1596942179013" duration="15833000" />
     </task>
     <servers />
   </component>
@@ -161,6 +170,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1597023567610">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1597023567610" />
     <state x="668" y="272" width="641" height="561" key="NewPhpClassDialog" timestamp="1596684540501">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -173,9 +186,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1596684607582" />
-    <state x="718" y="466" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1596857339511">
+    <state x="718" y="466" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1596946644513">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="718" y="466" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1596857339511" />
+    <state x="718" y="466" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1596946644513" />
   </component>
 </project>

@@ -20,3 +20,7 @@ Route::get('/ad/{id}/destroy','PostController@destroy');
 Route::post('/ad/update','PostController@update');
 
 Route::get('about', 'PagesController@getAbout');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

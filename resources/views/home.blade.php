@@ -52,7 +52,34 @@
 
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col" style="width: 10%">Title</th>
+                                <th scope="col" style="width: 10%">Price</th>
+                                <th scope="col" style="width: 50%">Description</th>
+                                <th scope="col" style="width: 10%">Created At</th>
+                                <th scope="col" style="width: 20%">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($posts as $key => $post)
+
+                                        <tr>
+                                            <td>{{$post->title}}</td>
+                                            <td>${{ $post->price }}</td>
+                                            <td>{{ substr($post->description, 0, 50) }}</td>
+                                            <td>{{ date('M j, Y H:i', strtotime($post->created_at)) }}</td>
+                                            <td>
+                                                <a class="btn btn-secondary" href="/ad/{{ $post->id }}" role="button">View</a>
+                                                <a href="/ad/{{ $post->id }}/edit"><button type="button" class="btn btn-info">Edit</button></a>
+                                                <a href="/ad/{{ $post->id }}/destroy"><button type="button" class="btn btn-danger">Delete</button></a>
+                                            </td>
+                                        </tr>
+
+                                @endforeach
+                                </tbody>
+                            </table>
                     </div>
                 </div>
 

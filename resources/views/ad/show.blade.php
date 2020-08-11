@@ -36,14 +36,6 @@
 
                 </div>
 
-                <div class="row">
-                    <div class="col-md-2">
-                        <a href="/ad/{{ $post->id }}/edit"><button type="button" class="btn btn-info">Edit Ad</button></a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="/ad/{{ $post->id }}/destroy"><button type="button" class="btn btn-danger">Delete Ad</button></a>
-                    </div>
-                </div>
                 <hr>
 
                 <!-- Preview Image -->

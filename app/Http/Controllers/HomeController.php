@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -27,6 +28,9 @@ class HomeController extends Controller
     {
         $user = User::find(Auth::user()->id);
 
-        return view('home', $user);
+        $oPost = new Post();
+        $posts = $oPost::all();
+
+        return view('home')->with(['user' => $user, 'posts' => $posts]);
     }
 }

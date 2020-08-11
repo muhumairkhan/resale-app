@@ -131,6 +131,6 @@ class PostController extends Controller
     {
         Post::destroy($id);
 
-        return redirect('/');
+        return redirect('/home');
     }
 }

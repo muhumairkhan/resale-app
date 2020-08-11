@@ -6,7 +6,7 @@
     <br >
 
     <div class="container">
-        <h6 class="section-title h1">{{ Auth::user()->name }}</h6>
+        <h6 class="section-title h1">Dashboard</h6>
         <div class="row">
             <div class="col-md-12 ">
                 <nav>

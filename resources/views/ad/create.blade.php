@@ -37,6 +37,8 @@
                     <textarea class="form-control" name="description" id="description" rows="5"></textarea>
                 </div>
 
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+
                 {{ csrf_field() }}
 
                 <button type="submit" class="btn btn-primary">Post Ad</button>

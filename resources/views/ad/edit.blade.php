@@ -28,7 +28,6 @@
                     <label for="title">Title</label>
                     <input type="text" name="title" class="form-control" value="{{ $post->title }}" id="title" placeholder="Enter ad title">
                 </div>
-                <input type="hidden" name="id" value="{{ $post->id }}">
                 <div class="form-group">
                     <label for="price">Price (USD)</label>
                     <input type="text" class="form-control" name="price" value="{{ $post->price }}" id="price" placeholder="Enter ad price">
@@ -37,6 +36,8 @@
                     <label for="description">Description</label>
                     <textarea class="form-control" name="description" id="description" rows="5">{{ $post->description }}</textarea>
                 </div>
+
+                <input type="hidden" name="id" value="{{ $post->id }}">
 
                 {{ csrf_field() }}
 

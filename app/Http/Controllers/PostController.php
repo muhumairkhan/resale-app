@@ -9,7 +9,7 @@ use MongoDB\Driver\Session;
 
 class PostController extends Controller
 {
-    
+
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index','show']]);
@@ -56,7 +56,7 @@ class PostController extends Controller
         ));
 
         $oPost = new Post();
-        $oPost->user_id = 1;
+        $oPost->user_id = $request->user_id;
         $oPost->title = $request->title;
         $oPost->description = $request->description;
         $oPost->price = $request->price;

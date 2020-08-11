@@ -57,8 +57,8 @@
                             <tr>
                                 <th scope="col" style="width: 10%">Title</th>
                                 <th scope="col" style="width: 10%">Price</th>
-                                <th scope="col" style="width: 50%">Description</th>
-                                <th scope="col" style="width: 10%">Created At</th>
+                                <th scope="col" style="width: 45%">Description</th>
+                                <th scope="col" style="width: 15%">Created At</th>
                                 <th scope="col" style="width: 20%">Actions</th>
                             </tr>
                             </thead>

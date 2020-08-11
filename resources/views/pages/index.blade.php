@@ -5,8 +5,11 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Home Page</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <h1 class="display-3">Resale App</h1>
+            <p>Need a sofa set? An led tv? A dining table? We got it all under our thousands of used products in your own
+                community.
+            </p>
+            <h3>Got Something to sell?</h3>
             <p><a class="btn btn-primary btn-lg" href="/ad/create" role="button">Post New Ad</a></p>
         </div>
     </div>

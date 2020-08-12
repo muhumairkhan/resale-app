@@ -21,7 +21,7 @@
             @if (count($posts)>0)
                 @foreach($posts as $key => $post)
 
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-md-offset-1" style="margin-top: 50px; border: 1px solid #ccc; border-radius: 5px; margin-left:50px;">
                         <h2 >  {{$post->title}}</h2>
                         <span class="badge badge-secondary"> ${{ $post->price }}</span> &nbsp;
                         <span> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar-date-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@
                         <p></p>
                         <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
                         <p></p>
-                        <p>{{ substr($post->description, 0, 150) }}</p>
+                        <p>{!! substr($post->description, 0, 150) !!} ...  </p>
                         <p><a class="btn btn-secondary" href="/ad/{{ $post->id }}" role="button">View details &raquo;</a></p>
                     </div>
 

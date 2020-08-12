@@ -51,7 +51,7 @@ class PostController extends Controller
 
         $this->validate($request, array(
             'title' => ['required', 'max:255'],
-            'price' => ['required', 'integer'],
+            'price' => ['required'],
             'description' => ['required']
         ));
 
@@ -104,8 +104,8 @@ class PostController extends Controller
     {
 
         $this->validate($request, array(
-            'title' => ['required', 'max:255'],
-            'price' => ['required', 'integer'],
+            'title' => ['required'],
+            'price' => ['required'],
             'description' => ['required']
         ));
 

@@ -9,4 +9,6 @@ $(document).ready(function (){
         $('#profile-data-table').show('slow');
         $('#profile-data-edit-form').hide('slow');
     });
+
+    CKEDITOR.replace( 'description' );
 });

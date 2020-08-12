@@ -117,7 +117,7 @@
                                                 <tr>
                                                     <td>{{$post->title}}</td>
                                                     <td>${{ $post->price }}</td>
-                                                    <td>{{ substr($post->description, 0, 50) }}</td>
+                                                    <td>{!! substr($post->description, 0, 100) !!} ...</td>
                                                     <td>{{ date('M j, Y H:i', strtotime($post->created_at)) }}</td>
                                                     <td>
                                                         <a class="btn btn-secondary" href="/ad/{{ $post->id }}" role="button">View</a>

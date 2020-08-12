@@ -2,6 +2,12 @@
 
 @section('content')
 
+    <style>
+        #profile-data-edit-form {
+            display: none;
+        }
+    </style>
+
     <br >
     <br >
 
@@ -28,7 +34,7 @@
                 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-                        <table class="table">
+                        <table class="table" id="profile-data-table">
                             <thead>
                             <tr>
                                 <th scope="col">Name</th>
@@ -45,10 +51,51 @@
                                 <td>{{ Auth::user()->address }}</td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-info">Edit Profile</button></td>
+                                <td><button type="button" id="edit-profile-data" class="btn btn-info">Edit Profile</button></td>
                             </tr>
                             </tbody>
                         </table>
+
+                        <div id="profile-data-edit-form">
+
+                            <h3>Edit Profile Data</h3>
+
+                            <br >
+
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <p>Errors:</p>
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            <form method="POST" action="/user/update">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" class="form-control" value="{{ Auth::user()->name }}" id="name" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" name="phone" value="{{ Auth::user()->phone }}" id="phone" placeholder="Enter phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" name="address" value="{{ Auth::user()->address }}" id="address" placeholder="Enter address">
+                                </div>
+
+                                <input type="hidden" name="id" value="{{ Auth::user()->id }}">
+
+                                {{ csrf_field() }}
+
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" id="cancel-profile-edit" class="btn btn-danger">Cancel</button>
+                            </form>
+
+                        </div>
 
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">

@@ -29,7 +29,7 @@ class HomeController extends Controller
         $user = User::find(Auth::user()->id);
 
         $oPost = new Post();
-        $posts = $oPost::all();
+        $posts = $oPost::all()->where('user_id', Auth::user()->id);
 
         return view('home')->with(['user' => $user, 'posts' => $posts]);
     }
